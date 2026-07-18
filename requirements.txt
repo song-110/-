@@ -1,0 +1,24 @@
+﻿# ============================================================
+# Real-time Screen Object Detection System - Dependencies
+# ============================================================
+# Install with: pip install -r requirements.txt
+#
+# Core
+numpy>=1.24
+opencv-python>=4.8
+#
+# Screen capture (install at least one)
+dxcam             # DXGI Desktop Duplication (recommended, ~1ms latency)
+mss>=9.0          # Fallback cross-platform capture
+#
+# YOLO inference (auto-selects best available)
+ultralytics>=8.1  # PyTorch YOLO (fallback)
+onnxruntime-gpu>=1.16  # ONNX Runtime GPU (primary)
+# onnxruntime>=1.16     # ONNX Runtime CPU (alternative)
+#
+# Windows-specific
+pywin32>=306       # Win32 API for overlay and cursor
+#
+# Optional: TensorRT (requires manual NVIDIA install)
+# tensorrt>=8.6
+# cuda-python>=12.1
